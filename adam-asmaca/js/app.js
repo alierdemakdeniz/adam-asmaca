@@ -13,8 +13,9 @@ let i=5;
 displayWord();
 // tuşa her bastığında 
 window.addEventListener("keydown",(e)=>{
-    if (e.keyCode >= 65){
-
+    
+    if (e.keyCode >= 65 && wrongLetters.length <= 5 && word_el.innerText.replace(/\n/g,"")!==selectedWord){
+        console.log(wrongLetters);
         if (selectedWord.includes(e.key)){
             correctLetters.push(e.key)
             
@@ -25,9 +26,8 @@ window.addEventListener("keydown",(e)=>{
             
             wrongLettersShow();
         }
-        displayWord();
-        console.log(word_el.children.innerHTML)            
-        console.log(word_el.innerText.replace(/\n/g,""));
+        displayWord();         
+        
         checkWord();
     }
 
@@ -43,28 +43,28 @@ function displayWord(){
     word_el.innerHTML = `
     ${
         selectedWord.split("").map(letter => `
-        <input value="${correctLetters.includes(letter) ? letter: ""}"class="letter" style="color: white">
-        </input>`).join("")
+        <div class="letter" style="color: white">
+        ${correctLetters.includes(letter) ? letter: ""}
+        </div>`).join("")
     }`
     
 }
 // hatalı harfleri göstermek ve adam asmak 
 function wrongLettersShow(){
-    wrong.innerHTML=`${wrongLetters}`
-        
-            adam.children[i].setAttribute("style","display:block")
-        i+= 1;
+    if(wrongLetters.length <= 6){
 
-    
-    
+        wrong.innerHTML=`${wrongLetters}`
+        adam.children[i].setAttribute("style","display:block")
+        i+= 1;
+    }
     
 }
 // kelime kontrol etmek
 function checkWord(){
-    console.log(word_el.innerText.replace(/\n/g,""));
     if (word_el.innerText.replace(/\n/g,"")===selectedWord){
         box.style.display="flex"
         win.style.display="block"
+
     }else if (i===11){
         box.style.display="flex"
         lose.style.display="block"
