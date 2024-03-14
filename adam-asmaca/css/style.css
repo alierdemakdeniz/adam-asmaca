@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1e5b3a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+h1,
+p {
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.adam {
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.adam :nth-child(6) {
+    display: none;
+}
+.adam :nth-child(7) {
+    display: none;
+}
+.adam :nth-child(8) {
+    display: none;
+}
+.adam :nth-child(9) {
+    display: none;
+}
+.adam :nth-child(10) {
+    display: none;
+}
+.adam :nth-child(11) {
+    display: none;
+}
+#wrong-letters span {
+    color: red;
+    font-size: 20px;
+}
+
+#word {
+    display: flex;
+    justify-content: center;
+}
+.letter {
+    color: #1e5b3a;
+    width: 15px;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 5px;
+    font-size: 25px;
+    border-bottom: 3px solid white;
+}
+#message {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    background-color: rgba(36, 144, 81, 0.901);
+    box-shadow: 0 5px 25px 5px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.message-text {
+    text-align: center;
+    margin-top: 45px;
+    font-weight: 600;
+}
+#true {
+    /* display: block; */
+    display: none;
+
+}
+#false {
+    /* display: block; */
+    display: none;
+}
+.button {
+    text-decoration: none;
+    margin: 10px 40px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}

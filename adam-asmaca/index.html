@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Adam Asmaca</title>
+</head>
+
+<body>
+    <h1>adam asmaca oyunu</h1>
+    <p>gizlenmiş harfleri bulmak için harf giriniz</p>
+
+    <div class="container">
+
+        <svg width="300" height="300" class="adam">
+            <!-- alt çizgi -->
+            <line x1="50" y1="250" x2="150" y2="250" stroke="black" stroke-width="4" /> 
+            <!-- dikey çizgi -->
+            <line x1="75" y1="250" x2="75" y2="50" stroke="black" stroke-width="4" />
+            <!-- çapraz-çizgi -->
+            <line x1="75" y1="75" x2="100" y2="50" stroke="black" stroke-width="4" />
+            <!-- üst çizgi -->
+            <line x1="75" y1="50" x2="150" y2="50" stroke="black" stroke-width="4" />
+            <!-- ip -->
+            <line x1="150" y1="50" x2="150" y2="75" stroke="black" stroke-width="4" />
+            <!-- kafa -->
+            <circle cx="150" cy="95" r="20" stroke="black " stroke-width="4" fill="transparent"/>
+            <!-- gövde -->
+            <line x1="150" y1="115" x2="150" y2="175" stroke="black" stroke-width="4" />
+            <!-- sağ-kol -->
+            <line x1="150" y1="135" x2="175" y2="115" stroke="black" stroke-width="4" />
+            <!-- sol-kol -->
+            <line x1="150" y1="135" x2="125" y2="115" stroke="black" stroke-width="4" />
+            <!-- sol-ayak -->
+            <line x1="150" y1="175" x2="125" y2="195" stroke="black" stroke-width="4" />
+            <!-- sağ-ayak -->
+            <line x1="150" y1="175" x2="175" y2="195" stroke="black" stroke-width="4" />
+        </svg>
+        <div id="wrong-letters">
+            <p>hatalı harfler:</p>
+            <span id="wrong"></span>
+        </div>
+        <div id="word">
+            <!-- <div class="letter">c</div>
+            <div class="letter">s</div>
+            <div class="letter">s</div> -->
+        </div>
+        <div id="message">
+            <p id="true" class="message-text">tebrikler kazandınız</p>
+            <p id="false" class="message-text">kaybettiniz</p>
+            <a href="" class="button"><i class="fa-solid fa-rotate-right"></i> Tekrar oyna</a>
+            
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
