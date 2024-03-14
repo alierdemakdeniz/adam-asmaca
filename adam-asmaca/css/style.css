@@ -48,15 +48,7 @@ p {
     display: flex;
     justify-content: center;
 }
-.letter {
-    color: #1e5b3a;
-    width: 15px;
-    text-align: center;
-    margin: 10px;
-    padding-bottom: 5px;
-    font-size: 25px;
-    border-bottom: 3px solid white;
-}
+
 #message {
     /* display: flex; */
     display: none;
@@ -94,4 +86,18 @@ p {
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
+}
+.letter{
+    color: #010101;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+    border-bottom: 3px solid whitesmoke;
+    background-color:transparent;
+    margin-top: 15px;
+    margin-left:15px;
+    margin-bottom: 15px;
+    width: 20px;
+    height: 30px;
+
 }

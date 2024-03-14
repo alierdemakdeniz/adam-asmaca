@@ -17,15 +17,17 @@ window.addEventListener("keydown",(e)=>{
 
         if (selectedWord.includes(e.key)){
             correctLetters.push(e.key)
-            console.log(correctLetters);
+            
             
         }else{
-            console.log("hata");
+        
             wrongLetters.push(e.key)
             
             wrongLettersShow();
         }
         displayWord();
+        console.log(word_el.children.innerHTML)            
+        console.log(word_el.innerText.replace(/\n/g,""));
         checkWord();
     }
 
@@ -41,9 +43,8 @@ function displayWord(){
     word_el.innerHTML = `
     ${
         selectedWord.split("").map(letter => `
-        <div class="letter" style="color: white">
-        ${correctLetters.includes(letter) ? letter: ""}
-        </div>`).join("")
+        <input value="${correctLetters.includes(letter) ? letter: ""}"class="letter" style="color: white">
+        </input>`).join("")
     }`
     
 }
@@ -60,6 +61,7 @@ function wrongLettersShow(){
 }
 // kelime kontrol etmek
 function checkWord(){
+    console.log(word_el.innerText.replace(/\n/g,""));
     if (word_el.innerText.replace(/\n/g,"")===selectedWord){
         box.style.display="flex"
         win.style.display="block"
