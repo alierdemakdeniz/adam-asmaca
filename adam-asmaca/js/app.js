@@ -15,12 +15,12 @@ displayWord();
 window.addEventListener("keydown",(e)=>{
     
     if (e.keyCode >= 65 && wrongLetters.length <= 5 && word_el.innerText.replace(/\n/g,"")!==selectedWord){
-        console.log(wrongLetters);
-        if (selectedWord.includes(e.key)){
+        
+        if (selectedWord.includes(e.key) && !correctLetters.includes(e.key)){
             correctLetters.push(e.key)
             
             
-        }else{
+        }else if (!wrongLetters.includes(e.key) && !selectedWord.includes(e.key)){
         
             wrongLetters.push(e.key)
             
@@ -52,6 +52,7 @@ function displayWord(){
 // hatalı harfleri göstermek ve adam asmak 
 function wrongLettersShow(){
     if(wrongLetters.length <= 6){
+        
 
         wrong.innerHTML=`${wrongLetters}`
         adam.children[i].setAttribute("style","display:block")
